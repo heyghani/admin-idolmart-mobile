@@ -16,6 +16,9 @@ import Logout from "views/Logout";
 import Video from "views/video/Video";
 import EditVideo from "views/video/Edit";
 import Layout from "views/Layout";
+import CreateEmployee from "views/employee/Create";
+import EditEmployee from "views/employee/Edit";
+import ListEmployee from "views/employee/List";
 
 var routes = [
 	{
@@ -145,6 +148,29 @@ var routes = [
 		name: "Layouts",
 		icon: "ni ni-palette text-blue",
 		component: Layout,
+		layout: "/app",
+	},
+	{
+		path: "/employee/create",
+		name: "Tambah employee",
+		icon: "ni ni-world text-blue",
+		component: CreateEmployee,
+		layout: "/app",
+		invisible: true,
+	},
+	{
+		path: "/employee/edit/:id",
+		name: "Edit employee",
+		icon: "ni ni-app text-blue",
+		component: EditEmployee,
+		layout: "/app",
+		invisible: true,
+	},
+	{
+		path: "/employee",
+		name: "employee",
+		icon: "ni ni-world text-blue",
+		component: ListEmployee,
 		layout: "/app",
 	},
 
